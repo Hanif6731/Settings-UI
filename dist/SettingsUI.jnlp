@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="SettingsUI.jnlp">
+  <information>
+    <title>SettingsUI</title>
+    <vendor>mdhan</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="SettingsUI.jar" size="16142" download="eager" />
+    <jar href="lib\controlsfx-8.40.14.jar" size="1215643" download="eager" />
+    <jar href="lib\fxgl-0.5.4-uber.jar" size="11127771" download="eager" />
+    <jar href="lib\jfoenix.jar" size="2211776" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="SettingsUI" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="settingsui.SettingsUIMain"  name="SettingsUI" />
+  <update check="always"/>
+</jnlp>

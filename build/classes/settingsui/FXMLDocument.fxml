@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="465.0" prefWidth="380.0" style="-fx-background-color: #ffffff00;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="settingsui.FXMLDocumentController">
+   <children>
+      <AnchorPane fx:id="topBar" prefHeight="60.0" prefWidth="380.0" style="-fx-background-color: #3D4956;">
+         <children>
+            <ImageView fx:id="btn_settings" fitHeight="35.0" fitWidth="32.0" layoutX="44.0" layoutY="14.0" onMouseClicked="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/settings.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btn_off" fitHeight="35.0" fitWidth="32.0" layoutX="306.0" layoutY="14.0" onMouseClicked="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/off.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btn_user" fitHeight="35.0" fitWidth="32.0" layoutX="133.0" layoutY="14.0" onMouseClicked="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/user.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="32.0" layoutX="220.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/trophy.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="h_user" layoutY="74.0" prefHeight="393.0" prefWidth="380.0" style="-fx-background-color: #3D4956;">
+         <children>
+            <ImageView layoutX="160.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/maleUser.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="175.0" layoutY="151.0" text="Hanif" textFill="#fcfcfc">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="164.0" layoutY="168.0" text="CS Student" textFill="#fcfcfc">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <ImageView layoutX="139.0" layoutY="-14.0" onMouseClicked="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/up.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="h_settings" layoutY="75.0" prefHeight="393.0" prefWidth="380.0" style="-fx-background-color: #3D4956;">
+         <children>
+            <Label layoutX="32.0" layoutY="36.0" text="Touch Enabled" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXToggleButton fx:id="touch" layoutX="246.0" layoutY="32.0" onAction="#tBtnAction" prefHeight="43.0" prefWidth="95.0" text=" " textFill="#eda678" toggleColor="#eda678" toggleLineColor="#eba478e3" />
+            <Label fx:id="t_label" layoutX="32.0" layoutY="60.0" text="Called 3D touch, the new&#10;technology can sense pressure" textFill="WHITE">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+            <Label fx:id="s_label" layoutX="33.0" layoutY="126.0" text="Auto subscribe to the channel" textFill="WHITE">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+            <JFXToggleButton fx:id="subscribe" layoutX="246.0" layoutY="91.0" onAction="#sBtnAction" prefHeight="43.0" prefWidth="95.0" text=" " textFill="#eda678" toggleColor="#eda678" toggleLineColor="#eba478e3" />
+            <Label layoutX="34.0" layoutY="102.0" text="Auto Subscribe" textFill="#fcfcfc">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Separator layoutX="34.0" layoutY="208.0" opacity="0.33" prefHeight="3.0" prefWidth="307.0" />
+            <JFXSlider fx:id="brightness" layoutX="34.0" layoutY="262.0" prefHeight="14.0" prefWidth="307.0">
+               <effect>
+                  <ColorAdjust brightness="0.38" contrast="0.74" hue="-0.59" saturation="0.02" />
+               </effect></JFXSlider>
+            <Label layoutX="34.0" layoutY="237.0" text="Screen Brightness" textFill="#fcfcfc">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXCheckBox checkedColor="#eda678" layoutX="25.0" layoutY="284.0" text="Auto Brightness" textFill="WHITE" />
+            <JFXButton layoutX="210.0" layoutY="329.0" onAction="#saveBtnAction" prefHeight="25.0" prefWidth="131.0" style="-fx-background-color: #eda678; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="Save" />
+            <JFXButton layoutX="34.0" layoutY="329.0" onAction="#cancelBtnAction" prefHeight="25.0" prefWidth="131.0" style="-fx-background-color: #515d6d; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="Cancel" textFill="WHITE" />
+            <ImageView layoutX="50.0" layoutY="-15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/up.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
